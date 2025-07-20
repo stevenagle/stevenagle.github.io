@@ -2,10 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-experience',
-  imports: [],
-  templateUrl: './experience.html',
-  styleUrl: './experience.css'
+  templateUrl: './experience.component.html',
+  styleUrls: ['./experience.component.css']
 })
-export class Experience {
-
-}
+export class ExperienceComponent { }

@@ -1,11 +1,11 @@
-// app.routes.ts
 import { Routes } from '@angular/router';
+import { ExperienceComponent } from './experience/experience.component';
 import { AboutMeComponent } from './about-me/about-me.component';
-import { ExperienceComponent } from './experience/experience';
-import { ContactComponent } from './contact/contact';
+import { ContactComponent } from './contact/contact.component';
 
 export const routes: Routes = [
-  { path: '', component: AboutMeComponent },
-  { path: 'experience', component: ExperienceComponent },
-  { path: 'contact', component: ContactComponent }
+      { path: '', component: AboutMeComponent }, // Default route
+      { path: 'experience', component: ExperienceComponent },
+      { path: 'contact', component: ContactComponent },
+      { path: '**', redirectTo: '' } // Wildcard route for unmatched paths
 ];
