@@ -1,0 +1,48 @@
+.about-wrapper {
+  background-color: #121212;
+  color: #ffffff;
+  padding: 80px 24px 40px;
+  text-align: center;
+  min-height: 100vh;
+}
+
+.headline {
+  font-size: 2.6rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: #80aaff;
+}
+
+.image-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.profile-pic {
+  width: 240px;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(128, 128, 128, 0.7);
+  border: 2px solid #80aaff; /* soft blue border */
+  background-color: #1f1f1f; /* fallback background */
+}
+
+
+.caption {
+  font-style: italic;
+  font-size: 0.9rem;
+  color: #cccccc;
+  margin-top: 8px;
+}
+
+.about-text {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: justify;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #f0f0f0;
+}
