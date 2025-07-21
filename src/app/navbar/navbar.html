@@ -1,5 +1,7 @@
-<nav>
-  <a routerLink="/">About</a>
-  <a routerLink="/experience">Experience</a>
-  <a routerLink="/contact">Contact</a>
+<nav class="navbar">
+  <ul class="nav-list">
+    <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">About</a></li>
+    <li><a routerLink="/experience" routerLinkActive="active">Experience</a></li>
+    <li><a routerLink="/contact" routerLinkActive="active">Contact</a></li>
+  </ul>
 </nav>
