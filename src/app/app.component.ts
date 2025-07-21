@@ -3,6 +3,7 @@ import { AboutMeComponent } from './about-me/about-me.component';
 import { ExperienceComponent } from './experience/experience.component';
 import { ContactComponent } from './contact/contact.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -11,4 +12,14 @@ import { NavbarComponent } from './navbar/navbar.component';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {}
+export class AppComponent {
+    title = 'About Me'
+
+    constructor(private router: Router) {
+        let path = localStorage.getItem('path');
+        if (path) {
+            localStorage.removeItem('path');
+            this.router.navigate([path]);
+        }
+    }
+}
