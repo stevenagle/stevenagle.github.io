@@ -1,0 +1,7 @@
+.scroll-wrapper {
+  display: flex;
+  flex-direction: column;
+  scroll-behavior: smooth;
+  overflow-y: auto;
+  height: 100vh;
+}

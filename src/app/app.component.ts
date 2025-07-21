@@ -1,11 +1,16 @@
 import { Component } from '@angular/core';
-import { NavbarComponent } from './navbar/navbar.component';
 import { RouterOutlet } from '@angular/router';
+import { NavbarComponent } from './navbar/navbar.component';
+import { routeAnimations } from './animations/route-animations';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NavbarComponent],
+  imports: [// ✅ Enables Angular's animation engine
+    RouterOutlet,
+    NavbarComponent
+  ],
+  animations: [routeAnimations],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
