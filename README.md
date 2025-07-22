@@ -1,3 +1,5 @@
-# Personal site
+# Personal Site
 
-I'm building out an angular About Me style website. Work in progress.
+Current work in progress, but I'm building out a functional multi-component Single Page App with routing and animations to add a little front-end to my life.
+
+Completely original content and design.
