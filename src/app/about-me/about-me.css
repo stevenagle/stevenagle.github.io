@@ -10,7 +10,7 @@
   font-size: 2.6rem;
   font-weight: bold;
   margin-bottom: 100px;
-  color: #80aaff;
+  color: #6ec1e4;
 }
 
 .image-block {
@@ -26,7 +26,7 @@
   object-fit: cover;
   border-radius: 12px;
   box-shadow: 0 0 12px rgba(128, 128, 128, 0.7);
-  border: 2px solid #80aaff; /* soft blue border */
+  border: 2px solid #6ec1e4; /* soft blue border */
   background-color: #1f1f1f; /* fallback background */
   margin-bottom: 1.5rem;
 }
