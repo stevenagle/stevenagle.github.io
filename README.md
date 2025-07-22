@@ -1,8 +1,8 @@
-<p align="center"># Personal Site</p>
+# Personal Site
 
 <p align="center">
   <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=angular,js,css" />
+    <img src="https://skillicons.dev/icons?i=angular,ts,js,css" />
   </a>
 </p>
 
