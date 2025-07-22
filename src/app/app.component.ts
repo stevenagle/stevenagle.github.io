@@ -22,6 +22,8 @@ import { ContactComponent } from './contact/contact.component';
     styleUrls: ['./app.component.css']
 })
 export class AppComponent implements AfterViewInit, OnInit {
+    currentSectionId: string = 'about-me';
+
     constructor(private router: Router) {
         this.router.events.subscribe(event => {
             if (event instanceof NavigationEnd) {
@@ -52,35 +54,50 @@ export class AppComponent implements AfterViewInit, OnInit {
     }
 
     ngAfterViewInit() {
-        const sections = document.querySelectorAll('section[id]');
+        const sections = ['about-me', 'experience', 'contact'];
         const navLinks = document.querySelectorAll('.nav-link');
 
-        // Trigger initial highlight
-        const initialSection = document.querySelector('section[id]');
-        if (initialSection) {
-            const activeId = initialSection.getAttribute('id');
+        const setActive = (id: string) => {
             navLinks.forEach(link => {
                 const href = link.getAttribute('href')?.replace('#', '');
-                link.classList.toggle('active', href === activeId);
+                link.classList.toggle('active', href === id);
             });
-        }
+        };
 
+        // ScrollSpy Logic
         const observer = new IntersectionObserver(entries => {
-            const visibleEntries = entries
-                .filter(entry => entry.isIntersecting)
-                .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
+            let bestMatch: string | null = null;
+            let maxVisible = 0;
 
-            if (visibleEntries.length > 0) {
-                const activeId = visibleEntries[0].target.getAttribute('id');
-                navLinks.forEach(link => {
-                    const href = link.getAttribute('href')?.replace('#', '');
-                    link.classList.toggle('active', href === activeId);
-                });
+            entries.forEach(entry => {
+                const ratio = entry.intersectionRatio;
+                const id = entry.target.getAttribute('id');
+                if (entry.isIntersecting && ratio > maxVisible) {
+                    bestMatch = id;
+                    maxVisible = ratio;
+                }
+            });
+
+            if (bestMatch) {
+                setActive(bestMatch);
             }
         }, {
-            threshold: 0.3
+            threshold: [0.25, 0.5, 0.75, 1]
         });
 
-        sections.forEach(section => observer.observe(section));
+        sections.forEach(id => {
+            const el = document.getElementById(id);
+            if (el) observer.observe(el);
+        });
+
+        // Initial Activation
+        const firstSection = document.getElementById('about-me');
+        if (firstSection) {
+            const bounding = firstSection.getBoundingClientRect();
+            if (bounding.top >= 0 && bounding.bottom <= window.innerHeight) {
+                setActive('about-me');
+            }
+        }
     }
+
 }
