@@ -1,4 +1,4 @@
-# Personal Site
+<p align="center"># Personal Site</p>
 
 <p align="center">
   <a href="https://skillicons.dev">
