@@ -26,10 +26,10 @@ section {
   align-items: center;
   gap: 0.6rem;
   padding: 0.8rem 1.4rem;
-  border: 2px solid #6ec1e4;
+  border: 2px solid #0072b1;
   border-radius: 8px;
   background-color: transparent;
-  color: #6ec1e4;
+  color: #0072b1;
   font-weight: bold;
   font-size: 1rem;
   text-decoration: none;
@@ -42,7 +42,7 @@ section {
 
 .linkedin-button:hover,
 .linkedin-button:focus {
-  box-shadow: 0 0 12px rgba(110, 193, 228, 0.6);
+  box-shadow: 0 0 12px #0072b1;
   transform: scale(1.05);
   background-color: rgba(110, 193, 228, 0.05);
 }

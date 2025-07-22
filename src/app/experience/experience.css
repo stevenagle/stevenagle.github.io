@@ -26,15 +26,6 @@ section::after {
   min-height: 100vh;
 }
 
-/* .grid-container-top {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
-  place-items: end center;
-  justify-items: unsafe center;
-  gap: 2rem;
-  padding: 2rem;
-} */
-
 .grid-container-top {
   display:flex;
   flex-wrap:wrap;
