@@ -9,7 +9,7 @@
 .headline {
   font-size: 2.6rem;
   font-weight: bold;
-  margin-bottom: 30px;
+  margin-bottom: 100px;
   color: #80aaff;
 }
 
@@ -30,7 +30,6 @@
   background-color: #1f1f1f; /* fallback background */
 }
 
-
 .caption {
   font-style: italic;
   font-size: 0.9rem;
@@ -45,4 +44,17 @@
   font-size: 1.1rem;
   line-height: 1.8;
   color: #f0f0f0;
+}
+
+section {
+  padding: 5rem 3rem; /* Adds breathing room above and below */
+}
+
+section::after {
+  content: "";
+  display: block;
+  width: 75%;
+  height: 1px;
+  background-color: #898867; /* Matches navbar underline */
+  margin: 15rem auto 15rem auto;
 }

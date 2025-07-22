@@ -1,0 +1,91 @@
+section {
+  padding: 4rem 4rem; /* Adds breathing room above and below */
+}
+
+section::after {
+  content: "";
+  display: block;
+  width: 75%;
+  height: 1px;
+  background-color: #898867; /* Matches navbar underline */
+  margin: 15rem auto 15rem auto;
+}
+
+.headline {
+  font-size: 2.6rem;
+  font-weight: bold;
+  margin-bottom: 100px;
+  color: #80aaff;
+}
+
+.experience-wrapper {
+  background-color: #121212;
+  color: #ffffff;
+  padding: 80px 24px 40px;
+  text-align: center;
+  min-height: 100vh;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+  padding: 2rem;
+}
+
+.bottom-row {
+  margin-top: 4rem;
+}
+
+.experience-card {
+  background-color: #fff;
+  border: 3px solid #6ec1e4;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 320px;
+  opacity: 0;
+  transform: translateX(50px);
+  transition: transform 0.6s ease-out, opacity 0.6s ease-out;
+  transition-delay: 0ms; /* Will be set dynamically via JS */
+}
+
+.experience-card.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.tech-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+}
+
+.card-grid.bottom-row {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.tech-list li {
+  background-color: #f0f8ff;
+  padding: 0.4rem 0.8rem;
+  margin-bottom: 0.4rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+/* 👇 Media query for larger screens */
+@media (min-width: 768px) {
+  .card-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .experience-card:nth-child(4),
+  .experience-card:nth-child(5) {
+    grid-column: span 1;
+  }
+}
