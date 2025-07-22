@@ -1,3 +1,123 @@
 section {
   padding: 2rem 4rem; /* Adds breathing room above and below */
 }
+
+.headline {
+  font-size: 2.6rem;
+  font-weight: bold;
+  margin-bottom: 100px;
+  color: #80aaff;
+}
+
+.contact-text {
+    margin-bottom: 5rem;
+}
+
+.contact-wrapper {
+  background-color: #121212;
+  color: #ffffff;
+  padding: 80px 24px 40px;
+  text-align: center;
+  min-height: 100vh;
+}
+
+.linkedin-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.8rem 1.4rem;
+  border: 2px solid #6ec1e4;
+  border-radius: 8px;
+  background-color: transparent;
+  color: #6ec1e4;
+  font-weight: bold;
+  font-size: 1rem;
+  text-decoration: none;
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  min-width: 200px; /* Ensures consistent width */
+}
+
+.linkedin-button:hover,
+.linkedin-button:focus {
+  box-shadow: 0 0 12px rgba(110, 193, 228, 0.6);
+  transform: scale(1.05);
+  background-color: rgba(110, 193, 228, 0.05);
+}
+
+.linkedin-icon {
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: transform 0.3s ease;
+}
+
+.linkedin-button:hover .linkedin-icon {
+  transform: translateY(-2px);
+}
+
+.linkedin-text {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.linkedin-button:hover .linkedin-text {
+  opacity: 1;
+  transform: translateY(-2px);
+}
+
+.button-stack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 3.5rem;
+}
+
+.github-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.8rem 1.4rem;
+  border: 3px solid #b0b0b0; /* Lighter gray for visibility */
+  border-radius: 8px;
+  background-color: transparent;
+  color: #b0b0b0;
+  font-weight: bold;
+  font-size: 1rem;
+  text-decoration: none;
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  width: fit-content;
+  min-width: 200px; /* Match LinkedIn button width */
+  justify-content: center;
+}
+
+.github-button:hover,
+.github-button:focus {
+  box-shadow: 0 0 12px rgba(176, 176, 176, 0.6);
+  transform: scale(1.05);
+  background-color: rgba(176, 176, 176, 0.05);
+}
+
+.github-icon {
+  fill: #b0b0b0; /* Light gray for better contrast */
+  transition: transform 0.3s ease;
+}
+
+
+.github-button:hover .github-icon {
+  transform: translateY(-2px);
+}
+
+.github-text {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.github-button:hover .github-text {
+  opacity: 1;
+  transform: translateY(-2px);
+}
+

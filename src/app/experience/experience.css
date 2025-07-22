@@ -108,3 +108,28 @@ section::after {
     grid-template-columns: 1fr;
   }
 }
+
+.experience-card h2 {
+  color: #000000;
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.experience-card .title {
+  color: #333333;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.experience-card p {
+  color: #444444;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.tech-list li {
+  color: #222222;
+  font-size: 0.9rem;
+}
