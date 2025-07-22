@@ -49,11 +49,7 @@
               "sourceMap": true
             }
           },
-          "defaultConfiguration": "production",
-          "outputPath": {
-            "base": "docs",
-            "browser": ""
-          }
+          "defaultConfiguration": "production"
         },
         "serve": {
           "builder": "@angular/build:dev-server",
