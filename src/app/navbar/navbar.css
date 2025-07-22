@@ -2,7 +2,7 @@
   position: fixed;
   top: 0;
   width: 100%;
-  background: #ffffff;
+  background: #222121;
   z-index: 1000;
   padding: 1rem;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -19,10 +19,10 @@
 
 .nav-list li a {
   text-decoration: none;
-  color: #333;
+  color: #80aaff;
   font-weight: bold;
 }
 
 .nav-list li a.active {
-  border-bottom: 2px solid #007BFF;
+  border-bottom: 2px solid #898867;
 }
