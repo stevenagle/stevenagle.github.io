@@ -1,0 +1,68 @@
+.contact-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 3rem;
+  min-height: 440px;
+}
+
+.contact-heading {
+  margin-bottom: 1.25rem;
+}
+
+.contact-heading h2 {
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+}
+
+.contact-text > p {
+  max-width: 30rem;
+  color: var(--color-muted);
+}
+
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-link {
+  justify-content: flex-start;
+  padding: 1.2rem 1.4rem;
+  background: var(--color-surface);
+}
+
+.contact-link svg {
+  flex-shrink: 0;
+  fill: var(--color-accent);
+}
+
+.link-copy {
+  flex: 1;
+}
+
+.link-copy strong,
+.link-copy small {
+  display: block;
+}
+
+.link-copy strong {
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.link-copy small {
+  color: var(--color-muted);
+  font-size: 0.75rem;
+  font-weight: 400;
+}
+
+.link-arrow {
+  color: var(--color-accent);
+}
+
+@media (max-width: 700px) {
+  .contact-wrapper {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}

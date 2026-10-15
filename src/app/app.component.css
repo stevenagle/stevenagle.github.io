@@ -1,0 +1,38 @@
+main {
+  padding-top: var(--nav-height);
+}
+
+.skip-link {
+  position: fixed;
+  top: 1rem;
+  left: var(--page-gutter);
+  z-index: 200;
+  padding: 0.7rem 1rem;
+  background: var(--color-accent);
+  color: var(--color-bg);
+  border-radius: 4px;
+  transform: translateY(-200%);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding-block: 1.75rem;
+  border-top: 1px solid var(--color-border);
+  color: var(--color-muted);
+  font-size: 0.8rem;
+}
+
+.footer a {
+  color: var(--color-muted);
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: var(--color-accent);
+}

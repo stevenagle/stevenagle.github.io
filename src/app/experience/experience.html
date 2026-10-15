@@ -1,0 +1,27 @@
+<section id="experience" class="experience-wrapper section" aria-labelledby="experience-heading" tabindex="-1">
+  <div class="page-width">
+    <div class="section-heading">
+      <span class="eyebrow" aria-hidden="true">01 /</span>
+      <h2 id="experience-heading">Experience</h2>
+    </div>
+    <p class="section-intro">From enterprise APIs to mobile experiences, a career built around making complex systems work better.</p>
+    <ol class="experience-list">
+      @for (experience of experiences; track experience.company + experience.role) {
+        <li class="experience-row">
+          <div class="company">
+            <h3>{{ experience.company }}</h3>
+          </div>
+          <div class="role-details">
+            <p class="role">{{ experience.role }}</p>
+            <p class="description">{{ experience.description }}</p>
+            <ul class="tech-list" aria-label="Technologies">
+              @for (technology of experience.technologies; track technology) {
+                <li>{{ technology }}</li>
+              }
+            </ul>
+          </div>
+        </li>
+      }
+    </ol>
+  </div>
+</section>
